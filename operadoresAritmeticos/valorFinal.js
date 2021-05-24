@@ -26,7 +26,5 @@ class Carro {
 
 }
 
-
-
 const valorFinal = new Carro(100)
 console.log(valorFinal.valorCarro())
