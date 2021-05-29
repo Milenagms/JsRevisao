@@ -4,9 +4,20 @@
 
 
 function calculaHora(inicio, fim) {
-    const horaJogo = fim - inicio
-    if (horaJogo > 24) return false
-    return horaJogo
+    let horaJogo = 0;
+    if (fim < inicio) {
+        horaJogo = (24 - inicio) + fim;
+        return horaJogo
+    } else {
+        if (fim > inicio) {
+            horaJogo = fim - inicio;
+            return horaJogo
+        }
+        return 24
+
+
+
+    }
 }
 
-console.log(calculaHora(17, 24))
+console.log(calculaHora(8, 7))
